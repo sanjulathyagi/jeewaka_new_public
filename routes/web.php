@@ -30,4 +30,13 @@ Route::middleware([
 
 //Home
 Route::get('/', [HomeController::class, "index"])->name('home');
+Route::get('/about-us', [HomeController::class, "about"])->name('about');
+
+Route::prefix('contact-us')->group(function () {
+    Route::get('/', [ContactUsController::class,'contact'])->name('contact');
+});
+
+Route::prefix('checkout')->group(function () {
+    Route::get('/', [CheckOutController::class,'index'])->name('checkout');
+});
 

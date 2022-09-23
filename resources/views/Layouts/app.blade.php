@@ -45,10 +45,6 @@
 
         @yield('content')
 
-
-
-
-
     </main><!-- End #main -->
 
     <!-- ======= Footer ======= -->
