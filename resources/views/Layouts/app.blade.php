@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <title>Shoppers &mdash; Colorlib e-Commerce Template</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-@include('Libraries.styles')
-  </head>
-  <body>
+    @include('Libraries.styles')
+</head>
 
-  <div class="site-wrap">
-@include('components.header')
+<body>
 
-@yield('content')
+    <div class="site-wrap">
+        @include('components.header')
 
-@include('components.footer')
-  </div>
+        @yield('content')
 
-@include('Libraries.scripts')
+        @include('components.footer')
+    </div>
 
-  </body>
+    @include('Libraries.scripts')
+
+</body>
+
 </html>
