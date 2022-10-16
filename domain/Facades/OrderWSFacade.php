@@ -9,7 +9,7 @@ class OrderWSFacade extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return OrderWSService::class;
+        return OrderService::class;
     }
 
 }
