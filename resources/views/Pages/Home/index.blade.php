@@ -6,8 +6,8 @@
         <div class="col-md-5 text-center text-md-left pt-5 pt-md-0">
           <h1 class="mb-2"></h1>
           <div class="intro-text text-center text-md-left">
-            <p class="mb-4"> </p>
-            <p>
+            <p class="mb-4">Jeewaka Herbals Products (Pvt)Ltd </p>
+            <p>We Produce Ayurvedic Herbal products based on Koskandawala - Yakkala traditional ayurvedic scripts which are more than 200 years old.
               <a href="#" class="btn btn-sm btn-primary">Shop Now</a>
             </p>
           </div>
