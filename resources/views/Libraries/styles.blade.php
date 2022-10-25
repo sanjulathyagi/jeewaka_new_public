@@ -1,3 +1,3 @@
-
-    <link rel="stylesheet" href="css/core-style.css">
-    <link rel="stylesheet" href="style.css">
+@livewireStyles
+    <link rel="stylesheet" href="{{ asset('css/core-style.css') }}">
+    <link rel="stylesheet" href="{{ asset('style.css') }}">
