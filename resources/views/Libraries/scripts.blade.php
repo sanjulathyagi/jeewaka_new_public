@@ -5,17 +5,17 @@
  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- ##### jQuery (Necessary for All JavaScript Plugins) ##### -->
-    <script src="{{ asset('js/jquery/jquery-2.2.4.min.js') }}"></script>
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
     <!-- Popper js -->
-    <script src="{{ asset('js/popper.min.js') }}"></script>
+    <script src="js/popper.min.js"></script>
     <!-- Bootstrap js -->
-    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+    <script src="js/bootstrap.min.js"></script>
     <!-- Plugins js -->
-    <script src="{{ asset('js/plugins.js') }}"></script>
+    <script src="js/plugins.js"></script>
     <!-- Active js -->
-    <script src="{{ asset('js/active.js') }}"></script>
+    <script src="js/active.js"></script>
 
-    var ctx1 = document.getElementById("chart-line").getContext("2d");
+    {{-- var ctx1 = document.getElementById("chart-line").getContext("2d");
 
     var gradientStroke1 = ctx1.createLinearGradient(0, 230, 0, 50);
 
@@ -96,7 +96,7 @@
             },
         },
     });
-</script>
+</script> --}}
 <script>
     var win = navigator.platform.indexOf('Win') > -1;
     if (win && document.querySelector('#sidenav-scrollbar')) {

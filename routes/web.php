@@ -23,6 +23,7 @@ use Illuminate\Support\Facades\Route;
 
 //Home
 Route::get('/', [HomeController::class, "index"])->name('home');
+
 Route::get('/about-us', [HomeController::class, "about"])->name('about');
 
 Route::prefix('products')->group(function (){
