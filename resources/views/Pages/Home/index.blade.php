@@ -4,7 +4,7 @@
     <div class="products-catagories-area clearfix">
         <div class="amado-pro-catagory clearfix">
 
-            {{-- @foreach ($products as $product) --}}
+            @foreach ($products as $product)
 
             @if ($product->primaryImage)
             <img src="{{ config('image.access_path') }}/{{ $product->primaryImage->image?$product->primaryImage->image->name : '' }}"
