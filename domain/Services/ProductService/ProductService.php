@@ -30,6 +30,11 @@ class ProductService
         return $this->product->allActive();
     }
 
+    public function allActiveLimit()
+    {
+        return $this->product->allActiveLimit();
+    }
+
     public function get($product_id)
     {
         return $this->product->find($product_id);

@@ -31,4 +31,9 @@ class Product extends Model
     {
         return $this->where('is_active', 1)->get();
     }
+
+    public function allActiveLimit()
+    {
+        return $this->where('is_active', 1)->limit(5)->get();
+    }
 }

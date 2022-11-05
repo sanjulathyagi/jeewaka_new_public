@@ -9,7 +9,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $response['products'] = ProductFacade::allActive();
+        $response['products'] = ProductFacade::allActiveLimit();
         return view('Pages.Home.index')->with($response);
     }
 }
