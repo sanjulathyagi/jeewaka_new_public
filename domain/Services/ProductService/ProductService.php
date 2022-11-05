@@ -25,6 +25,11 @@ class ProductService
         return $this->product->all();
     }
 
+    public function allActive()
+    {
+        return $this->product->allActive();
+    }
+
     public function get($product_id)
     {
         return $this->product->find($product_id);

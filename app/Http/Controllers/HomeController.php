@@ -9,7 +9,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $response['products'] = ProductFacade::all();
+        $response['products'] = ProductFacade::allActive();
         return view('Pages.Home.index')->with($response);
     }
 }

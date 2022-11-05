@@ -26,4 +26,9 @@ class Product extends Model
     {
         return $this->hasOne(ProductImage::class, 'product_id', 'id')->where('status',ProductImage::STATUS['PRIMARY']);
     }
+
+    public function allActive()
+    {
+        return $this->where('is_active', 1)->get();
+    }
 }
