@@ -5,17 +5,16 @@
         <div class="amado-pro-catagory clearfix">
 
             @foreach ($products as $product)
-
-            @if ($product->primaryImage)
-            <img src="{{ config('image.access_path') }}/{{ $product->primaryImage->image?$product->primaryImage->image->name : '' }}"
-                width="100px">
-        @else
-            <img src="{{ asset('assets/img/no-image-png-2.png') }}" height="50px">
-        @endif
                 <!-- Single Catagory -->
                 <div class="single-products-catagory clearfix">
                     <a href="shop.html">
-                        <img src="img/bg-img/1.jpg" alt="">
+                        @if ($product->primaryImage)
+                            <img src="{{ config('image.access_path') }}/{{ $product->primaryImage->image ? $product->primaryImage->image->name : '' }}"
+                                width="100px" alt="">
+                        @else
+                            <img src="{{ asset('assets/img/no-image-png-2.png') }}">
+                        @endif
+
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <div class="line"></div>
@@ -24,6 +23,9 @@
                         </div>
                     </a>
                 </div>
+
+
+
         </div>
         @endforeach
     </div>
