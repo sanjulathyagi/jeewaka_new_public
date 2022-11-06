@@ -22,16 +22,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 //Home
-Route::get('/', [HomeController::class, "index"])->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::get('/about-us', [HomeController::class, "about"])->name('about');
+Route::get('/about-us', [HomeController::class, 'index'])->name('about');
 
 Route::prefix('products')->group(function (){
     Route::get('/',[ProductController::class, 'index'])->name('products.all');
 });
 
 Route::prefix('contact-us')->group(function () {
-    Route::get('/', [ContactUsController::class,'contact'])->name('contact');
+    Route::get('/', [ContactUsController::class,'index'])->name('contact');
 });
 
 Route::prefix('checkout')->group(function () {
