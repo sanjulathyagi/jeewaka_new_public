@@ -72,7 +72,7 @@
                                         <a class="nav-link" href="cart.html">Cart</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="checkout.html">Checkout</a>
+                                        <a class="nav-link" href="{{ route('contact') }}">Contact Us</a>
                                     </li>
                                 </ul>
                             </div>
