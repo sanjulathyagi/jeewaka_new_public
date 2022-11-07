@@ -8,11 +8,11 @@
                     <form class="row g-3" action="{{ route('contact.store') }}" method="POST">
                         <div class="col-md-6">
                           <label for="inputEmail4" class="form-label">Email</label>
-                          <input type="email" class="form-control" id="inputEmail4">
+                          <input type="email" class="form-control" id="inputEmail4" nmae="email">
                         </div>
                         <div class="col-md-6">
                           <label for="name" class="form-label">Name</label>
-                          <input type="text" class="form-control" id="inputPassword4">
+                          <input type="text" class="form-control" id="inputPassword4" name="name">
                         </div>
                         <div class="col-12">
                           <label for="inputAddress" class="form-label">Subject</label>
