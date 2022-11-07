@@ -10,4 +10,9 @@ class ContactUsController extends Controller
     {
         return view('Pages.Contact.index');
     }
+
+    public function store()
+    {
+        return back()->with('message','Thanks for contacting us');
+    }
 }

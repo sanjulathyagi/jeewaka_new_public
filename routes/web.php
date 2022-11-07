@@ -32,6 +32,7 @@ Route::prefix('products')->group(function (){
 
 Route::prefix('contact-us')->group(function () {
     Route::get('/', [ContactUsController::class,'index'])->name('contact');
+    Route::get('/', [ContactUsController::class,'store'])->name('contact.store');
 });
 
 Route::prefix('checkout')->group(function () {
