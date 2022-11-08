@@ -27,7 +27,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/about-us', [HomeController::class, 'index'])->name('about');
 
 Route::prefix('products')->group(function (){
-    Route::get('/',[ProductController::class, 'index'])->name('products.all');
+    Route::get('/',[ProductController::class, 'index'])->name('products.index');
 });
 
 Route::prefix('contact-us')->group(function () {

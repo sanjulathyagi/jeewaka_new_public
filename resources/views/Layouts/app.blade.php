@@ -21,10 +21,10 @@
 
     <div class="main-content-wrapper d-flex clearfix">
 
-        @include('components.header')
+        @include('components.sidebar')
 
         @yield('content')
-        
+
     </div>
 
     @include('components.footer')
