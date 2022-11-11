@@ -5,10 +5,11 @@
     <!-- ##### Single Widget ##### -->
     <div class="widget catagory mb-50">
         <!-- Widget Title -->
-        <h6 class="widget-title mb-30">Catagories</h6>
+        <h6 class="widget-title mb-30">Search</h6>
 
         <!--  Catagories  -->
         <div class="catagories-menu">
+            <input type="text" class="form-control">
             <ul>
                 <li class="active"><a href="#">Chairs</a></li>
                 <li><a href="#">Beds</a></li>
