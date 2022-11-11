@@ -24,12 +24,12 @@
 
     <div class="widget catagory mb-50">
         <!-- Widget Title -->
-        <h6 class="widget-title mb-30">Search</h6>
+        <h6 class="widget-title mb-30">Min Price</h6>
 
         <!--  Catagories  -->
         <div class="catagories-menu">
-            <input type="text" class="form-control">
-            
+            <input type="number" class="form-control">
+
         </div>
     </div>
 
