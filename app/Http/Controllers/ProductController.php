@@ -10,6 +10,6 @@ class ProductController extends Controller
     public function index()
     {
         $response['categories'] = CategoryFacade::all();
-        return view('Pages.Product.index');
+        return view('Pages.Product.index')->with($response);
     }
 }
