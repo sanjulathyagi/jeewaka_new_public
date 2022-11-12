@@ -49,9 +49,6 @@
 
             </div>
         </div>
-
-
-
     </div>
 
     <div class="amado_product_area section-padding-100">
