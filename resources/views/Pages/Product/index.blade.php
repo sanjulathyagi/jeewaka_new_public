@@ -51,7 +51,7 @@
         </div>
     </div>
 
-    <div class="amado_product_area section-padding-100">
+    <div class="amado_product_area section-padding-100" id="filter_product_items">
         <div class="container-fluid">
 
             <div class="row">
