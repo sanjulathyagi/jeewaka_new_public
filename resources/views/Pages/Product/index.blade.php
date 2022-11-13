@@ -21,7 +21,7 @@
                 <ul>
                     @foreach ($categories as $category)
                         <li>
-                            <a href="{{ $categories->name }}"></a>
+                            <a href="#" onclick="setCategory($category->name)">{{ $category->name }}</a>
                         </li>
                     @endforeach
 
@@ -68,10 +68,28 @@
             filterProduct();
         });
 
+        $('#search_input').on('keyup', function() {
+            filterProduct();
+        });
+        $('#search_max_price').on('keyup', function() {
+            filterProduct();
+        });
+        $('#search_min_price').on('keyup', function() {
+            filterProduct();
+        });
+
         function filterProduct() {
             var search = $('#search_input').val();
             var min_price = $('#search_min_price').val();
             var max_price = $('#search_max_price').val();
+            
+            var data = {
+                search: search,
+                min_price: min_price,
+                max_price: max_price,
+                category: category
+            };
+            console.log(data);
         }
     </script>
 @endpush
