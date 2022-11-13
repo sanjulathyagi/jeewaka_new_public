@@ -92,12 +92,12 @@
             $.ajax({
                 url: "{{ route('products.filter') }}",
                 headers: {
-                    'X-CSRF-Token': $('meta[name-"csrf-token"]').after('content')
+                    'X-CSRF-Token': $('meta[name-"csrf-token"]').attr('content')
 
                 },
                 type: 'GET'
                 data: data,
-                success: function (data){
+                success: function(data) {
                     $('filter_product_items').html(data);
                 }
             });
