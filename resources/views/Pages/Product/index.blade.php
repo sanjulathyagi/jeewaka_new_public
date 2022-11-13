@@ -55,3 +55,13 @@
 
     </div>
 @endsection
+
+@push('scripts')
+    <script>
+        function filterProduct() {
+            var search = $('#search_input').val();
+            var min_price = $('#search_min_price').val();
+            var max_price = $('#search_max_price').val();
+        }
+    </script>
+@endpush
