@@ -28,11 +28,12 @@ Route::get('/about-us', [HomeController::class, 'index'])->name('about');
 
 Route::prefix('products')->group(function (){
     Route::get('/',[ProductController::class, 'index'])->name('products.all');
+    Route::get('/filter',[ProductController::class,'filter'])->name('products.filter');
 });
 
 Route::prefix('contact-us')->group(function () {
     Route::get('/', [ContactUsController::class,'index'])->name('contact');
-    Route::get('/', [ContactUsController::class,'store'])->name('contact.store');
+    Route::get('/store', [ContactUsController::class,'store'])->name('contact.store');
 });
 
 Route::prefix('checkout')->group(function () {
