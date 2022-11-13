@@ -82,14 +82,26 @@
             var search = $('#search_input').val();
             var min_price = $('#search_min_price').val();
             var max_price = $('#search_max_price').val();
-            
+
             var data = {
                 search: search,
                 min_price: min_price,
                 max_price: max_price,
                 category: category
             };
-            console.log(data);
+            $.ajax({
+                url: "{{ route('products.filter') }}",
+                headers: {
+                    'X-CSRF-Token': $('meta[name-"csrf-token"]').after('content')
+
+                },
+                type: 'GET'
+                data: data,
+                success: function (data){
+                    $('filter_product_items').html(data);
+                }
+            });
+
         }
     </script>
 @endpush
