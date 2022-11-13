@@ -58,6 +58,16 @@
 
 @push('scripts')
     <script>
+        var category = 0;
+
+        function setCategory(id) {
+            category = id;
+        }
+
+        $(document).ready(function() {
+            filterProduct();
+        });
+
         function filterProduct() {
             var search = $('#search_input').val();
             var min_price = $('#search_min_price').val();
