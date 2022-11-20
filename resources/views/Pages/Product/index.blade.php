@@ -87,7 +87,7 @@
                 search: search,
                 min_price: min_price,
                 max_price: max_price,
-                category: category
+                category_id: category
             };
             $.ajax({
                 url: "{{ route('products.filter') }}",
