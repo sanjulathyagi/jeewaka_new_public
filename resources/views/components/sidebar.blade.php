@@ -21,7 +21,7 @@
                 <a href="index.html"><img src="img/core-img/logo.png" alt=""></a>
             </div>
             <!-- Amado Nav -->
-            <nav class="amado-nav">
+            {{-- <nav class="amado-nav">
                 <ul>
                     <li class="active"><a href="index.html">Home</a></li>
                     <li><a href="shop.html">Shop</a></li>
@@ -29,7 +29,7 @@
                     <li><a href="cart.html">Cart</a></li>
                     <li><a href="checkout.html">Checkout</a></li>
                 </ul>
-            </nav>
+            </nav> --}}
             <!-- Button Group -->
             <div class="amado-btn-group mt-30 mb-100">
                 <a href="#" class="btn amado-btn mb-15">%Discount%</a>
