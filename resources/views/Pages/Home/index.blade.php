@@ -12,7 +12,7 @@
                             <img src="{{ config('image.access_path') }}/{{ $product->primaryImage->image ? $product->primaryImage->image->name : '' }}"
                                 width="100px" alt="">
                         @else
-                            <img src="{{ asset('assets/img/no-image-png-2.png') }}">
+                            <img src="{{ asset('img/no-image-png-2.png') }}">
                         @endif
 
                         <!-- Hover Content -->

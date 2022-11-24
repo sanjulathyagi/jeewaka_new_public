@@ -1,16 +1,22 @@
 <div class="container-fluid">
-
     <div class="row">
-
         @forelse ($products as $product)
             <!-- Single Product Area -->
             <div class="col-12 col-sm-6 col-md-12 col-xl-6">
                 <div class="single-product-wrapper">
                     <!-- Product Image -->
                     <div class="product-img">
-                        <img src="img/product-img/product1.jpg" alt="">
+                        @if ($product->primaryImage)
+                        <img src="{{ config('image.access_path') }}/{{ $product->primaryImage->image ? $product->primaryImage->image->name : '' }}"
+                             alt="">
+                             <img class="hover-img" src="{{ config('image.access_path') }}/{{ $product->primaryImage->image ? $product->primaryImage->image->name : '' }}"
+                                 alt="">
+                        @else
+                        <img src="{{ asset('img/no-image-png-2.png') }}">
                         <!-- Hover Thumb -->
-                        <img class="hover-img" src="img/product-img/product2.jpg" alt="">
+                        <img class="hover-img" src="{{ asset('img/no-image-png-2.png') }}>
+                        @endif
+
                     </div>
 
                     <!-- Product Description -->
