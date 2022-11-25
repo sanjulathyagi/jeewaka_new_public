@@ -36,4 +36,27 @@ class Product extends Model
     {
         return $this->where('is_active', 1)->limit(5)->get();
     }
+
+    public function filter($data)
+    {
+        $products = $this->where('is_active',1);
+
+        if (isset($data['category_id']) && $data['category_id'] !=0){
+            $products = $products->where('category_id',$data['category_id']);
+        }
+
+        if (isset($data['min_price']) && $data['min_price'] > 0){
+            $products = $products->where('price', '>=' , $data['min_price']);
+        }
+
+        if (isset($data['max_price']) && $data['max_price'] > 0){
+            $products = $products->where('price', '<=' , $data['max_price']);
+        }
+
+        if (isset($data['search']) && $data['search'] !=0){
+            $products = $products->where('name', 'Like ', '%' , $data['search']. '%');
+        }
+
+        return $products->pagination(4);
+    }
 }
