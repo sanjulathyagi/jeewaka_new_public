@@ -8,7 +8,7 @@
             <h6 class="widget-title mb-30">Search</h6>
             <!--  Catagories  -->
             <div class="catagories-menu">
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" id="search_input" name="search">
             </div>
         </div>
 
@@ -17,8 +17,8 @@
             <h6 class="widget-title mb-30">Categories</h6>
             <!--  Catagories  -->
             <div class="catagories-menu">
-                <input type="text" class="form-control">
                 <ul>
+                    <li><a href="#" onclick="setCategory(0)">All</a></li>
                     @foreach ($categories as $category)
                         <li>
                             <a href="#" onclick="setCategory($category->name)">{{ $category->name }}</a>

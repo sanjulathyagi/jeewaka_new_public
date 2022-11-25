@@ -24,9 +24,9 @@
                         <!-- Product Meta Data -->
                         <div class="product-meta-data">
                             <div class="line"></div>
-                            <p class="product-price">$180</p>
+                            <p class="product-price">from RS.{{ $product->price }}</p>
                             <a href="product-details.html">
-                                <h6>Modern Chair</h6>
+                                <h6>{{ $product->name }}</h6>
                             </a>
                         </div>
                         <!-- Ratings & Cart -->
@@ -47,6 +47,7 @@
                 </div>
             </div>
         @empty
+        <img src="{{ asset('img\bg-img\empty.gif') }}" alt="">
         @endforelse
 
 
