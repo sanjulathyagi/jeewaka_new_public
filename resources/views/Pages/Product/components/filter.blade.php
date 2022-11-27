@@ -7,47 +7,50 @@
                     <!-- Product Image -->
                     <div class="product-img">
                         @if ($product->primaryImage)
-                        <img src="{{ config('image.access_path') }}/{{ $product->primaryImage->image ? $product->primaryImage->image->name : '' }}"
-                             alt="">
-                             <img class="hover-img" src="{{ config('image.access_path') }}/{{ $product->primaryImage->image ? $product->primaryImage->image->name : '' }}"
-                                 alt="">
+                            <img src="{{ config('image.access_path') }}/{{ $product->primaryImage->image ? $product->primaryImage->image->name : '' }}"
+                                alt="">
+                            <img class="hover-img"
+                                src="{{ config('image.access_path') }}/{{ $product->primaryImage->image ? $product->primaryImage->image->name : '' }}"
+                                alt="">
                         @else
-                        <img src="{{ asset('img/no-image-png-2.png') }}">
-                        <!-- Hover Thumb -->
-                        <img class="hover-img" src="{{ asset('img/no-image-png-2.png') }}>
-                        @endif
+                            <img src="{{ asset('img/no-image-png-2.png') }}">
+                            <!-- Hover Thumb -->
+                            <img class="hover-img"
+                                src="{{ asset('img/no-image-png-2.png') }}>
+@endif
 
                     </div>
 
                     <!-- Product Description -->
-                    <div class="product-description d-flex align-items-center justify-content-between">
-                        <!-- Product Meta Data -->
-                        <div class="product-meta-data">
-                            <div class="line"></div>
-                            <p class="product-price">from RS.{{ $product->price }}</p>
-                            <a href="product-details.html">
-                                <h6>{{ $product->name }}</h6>
-                            </a>
-                        </div>
-                        <!-- Ratings & Cart -->
-                        <div class="ratings-cart text-right">
-                            <div class="ratings">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
+                    <div class="product-description
+                                d-flex align-items-center justify-content-between">
+                            <!-- Product Meta Data -->
+                            <div class="product-meta-data">
+                                <div class="line"></div>
+                                <p class="product-price">from RS.{{ $product->price }}</p>
+                                <a href="product-details.html">
+                                    <h6>{{ $product->name }}</h6>
+                                </a>
                             </div>
-                            <div class="cart">
-                                <a href="cart.html" data-toggle="tooltip" data-placement="left" title="Add to Cart"><img
-                                        src="img/core-img/cart.png" alt=""></a>
+                            <!-- Ratings & Cart -->
+                            <div class="ratings-cart text-right">
+                                <div class="ratings">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </div>
+                                <div class="cart">
+                                    <a href="cart.html" data-toggle="tooltip" data-placement="left"
+                                        title="Add to Cart"><img src="img/core-img/cart.png" alt=""></a>
+                                </div>
                             </div>
-                        </div>
                     </div>
                 </div>
             </div>
         @empty
-        <img src="{{ asset('img\bg-img\empty.gif') }}" alt="">
+            <img src="{{ asset('img\bg-img\empty.gif') }}" alt="">
         @endforelse
 
 
@@ -60,10 +63,15 @@
             <!-- Pagination -->
             <nav aria-label="navigation">
                 <ul class="pagination justify-content-end mt-50">
-                    <li class="page-item active"><a class="page-link" href="#">01.</a></li>
+                    {{-- @foreach ($products->links()->elements as $key => $link)
+                        <li class="page-item active">
+                            <a class="page-link" href="{{ $link }}">{{ ++key }}</a>
+                        </li>
+                    @endforeach --}}
+                    {{-- <li class="page-item active"><a class="page-link" href="#">01.</a></li>
                     <li class="page-item"><a class="page-link" href="#">02.</a></li>
                     <li class="page-item"><a class="page-link" href="#">03.</a></li>
-                    <li class="page-item"><a class="page-link" href="#">04.</a></li>
+                    <li class="page-item"><a class="page-link" href="#">04.</a></li> --}}
                 </ul>
             </nav>
         </div>
