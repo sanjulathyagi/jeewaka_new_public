@@ -78,7 +78,13 @@
             filterProduct();
         });
 
-        function filterProduct() {
+        $(document).on('click', '.pagination a',function(event){
+            event.preventDefault();
+            var page = $(this).attr('href').split('pages')[1];
+            filterProduct(page);
+        });
+
+        function filterProduct(page = 1) {
             var search = $('#search_input').val();
             var min_price = $('#search_min_price').val();
             var max_price = $('#search_max_price').val();
@@ -90,7 +96,7 @@
                 category_id: category
             };
             $.ajax({
-                url: "{{ route('products.filter') }}",
+                url: "/products/filter/pages=" + page,
                 headers: {
                     'X-CSRF-Token': $('meta[name-"csrf-token"]').attr('content')
 
@@ -99,6 +105,7 @@
                 data: data,
                 success: function(data) {
                     $('filter_product_items').html(data);
+                    $('.navigation_product_items').attr("disabled","disabled");
                 }
             });
 
