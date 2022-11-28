@@ -63,11 +63,11 @@
             <!-- Pagination -->
             <nav aria-label="navigation">
                 <ul class="pagination justify-content-end mt-50">
-                    {{-- @foreach ($products->links()->elements as $key => $link)
+                    @foreach ($products->links()->elements as $key => $link)
                         <li class="page-item active">
                             <a class="page-link" href="{{ $link }}">{{ ++key }}</a>
                         </li>
-                    @endforeach --}}
+                    @endforeach
                     {{-- <li class="page-item active"><a class="page-link" href="#">01.</a></li>
                     <li class="page-item"><a class="page-link" href="#">02.</a></li>
                     <li class="page-item"><a class="page-link" href="#">03.</a></li>
