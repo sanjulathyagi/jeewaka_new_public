@@ -61,18 +61,9 @@
     <div class="row">
         <div class="col-12">
             <!-- Pagination -->
-            <nav aria-label="navigation">
-                <ul class="pagination justify-content-end mt-50">
-                    @foreach ($products->links()->elements as $key => $link)
-                        <li class="page-item active">
-                            <a class="page-link" href="{{ $link }}">{{ ++key }}</a>
-                        </li>
-                    @endforeach
-                    {{-- <li class="page-item active"><a class="page-link" href="#">01.</a></li>
-                    <li class="page-item"><a class="page-link" href="#">02.</a></li>
-                    <li class="page-item"><a class="page-link" href="#">03.</a></li>
-                    <li class="page-item"><a class="page-link" href="#">04.</a></li> --}}
-                </ul>
+            <nav aria-label="navigation" class="navigation">
+                {!! $products->links() !!}
+
             </nav>
         </div>
     </div>
