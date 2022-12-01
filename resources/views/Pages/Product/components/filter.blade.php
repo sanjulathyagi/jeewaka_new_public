@@ -3,6 +3,7 @@
         @forelse ($products as $product)
             <!-- Single Product Area -->
             <div class="col-12 col-sm-6 col-md-12 col-xl-6">
+                <a href="{{ route('products.view') }}">
                 <div class="single-product-wrapper">
                     <!-- Product Image -->
                     <div class="product-img">
@@ -16,14 +17,11 @@
                             <img src="{{ asset('img/no-image-png-2.png') }}">
                             <!-- Hover Thumb -->
                             <img class="hover-img"
-                                src="{{ asset('img/no-image-png-2.png') }}>
-@endif
-
+                                src="{{ asset('img/no-image-png-2.png') }}">
+                        @endif
                     </div>
-
                     <!-- Product Description -->
-                    <div class="product-description
-                                d-flex align-items-center justify-content-between">
+                    <div class="product-description d-flex align-items-center justify-content-between">
                             <!-- Product Meta Data -->
                             <div class="product-meta-data">
                                 <div class="line"></div>
@@ -48,13 +46,11 @@
                             </div>
                     </div>
                 </div>
+                </a>
             </div>
         @empty
             <img src="{{ asset('img\bg-img\empty.gif') }}" alt="">
         @endforelse
-
-
-
 
     </div>
 
