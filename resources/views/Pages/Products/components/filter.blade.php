@@ -3,7 +3,7 @@
         @forelse ($products as $product)
             <!-- Single Product Area -->
             <div class="col-12 col-sm-6 col-md-12 col-xl-6">
-                <a href="{{ route('products.view') }}">
+                <a href="{{ route('products.view',$product->id) }}">
                 <div class="single-product-wrapper">
                     <!-- Product Image -->
                     <div class="product-img">
