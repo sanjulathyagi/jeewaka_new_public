@@ -20,8 +20,9 @@
                     <div class="single_product_thumb">
                         <div id="product_details_slider" class="carousel slide" data-ride="carousel">
                             <ol class="carousel-indicators">
+                                @foreach ($product->images as $product_image)
                                 <li class="active" data-target="#product_details_slider" data-slide-to="0"
-                                    style="background-image: url(img/product-img/pro-big-1.jpg);">
+                                    style="background-image: url('{{ config('image.access_path') }}/{{ $product_image->image?$product_image->image->name:'' }}')">
                                 </li>
                                 <li data-target="#product_details_slider" data-slide-to="1"
                                     style="background-image: url(img/product-img/pro-big-2.jpg);">
@@ -32,6 +33,9 @@
                                 <li data-target="#product_details_slider" data-slide-to="3"
                                     style="background-image: url(img/product-img/pro-big-4.jpg);">
                                 </li>
+
+                                @endforeach
+
                             </ol>
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
