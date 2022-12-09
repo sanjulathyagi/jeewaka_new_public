@@ -44,6 +44,7 @@
             </div>
             @if (Auth::check())
                 <a href="" class="search-nav">Logout</a>
+                <a href="{{ route('account.index') }}" class="search-nav">My Account</a>
             @else
                 <a href="{{ route('login') }}" class="search-nav">Login</a>
             @endif
