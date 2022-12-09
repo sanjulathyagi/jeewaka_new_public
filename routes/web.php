@@ -32,6 +32,10 @@ Route::prefix('products')->group(function (){
     Route::get('/{product_id}/view',[ProductController::class,'view'])->name('products.view');
 });
 
+Route::prefix('MyAccount')->group(function (){
+    Route::get('/',[ProductController::class, 'index'])->name('products.all');
+});
+
 Route::prefix('contact-us')->group(function () {
     Route::get('/', [ContactUsController::class,'index'])->name('contact');
     Route::get('/store', [ContactUsController::class,'store'])->name('contact.store');
