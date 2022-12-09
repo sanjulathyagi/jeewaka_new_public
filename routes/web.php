@@ -5,6 +5,7 @@ use App\Http\Controllers\CheckOutController;
 use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MemberArea\AccountController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\QuotationController;
@@ -33,7 +34,7 @@ Route::prefix('products')->group(function (){
 });
 
 Route::prefix('MyAccount')->group(function (){
-    Route::get('/',[ProductController::class, 'index'])->name('products.all');
+    Route::get('/',[AccountController::class, 'index'])->name('account.index');
 });
 
 Route::prefix('contact-us')->group(function () {
