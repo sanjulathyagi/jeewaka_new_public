@@ -71,7 +71,8 @@
                         </div>
 
                         <!-- Add to Cart Form -->
-                        <form class="cart clearfix" action="{{ route('products.add.cart' , $product->id) }}" method="POST">
+                        <form class="cart clearfix" action="{{ route('products.add.cart') }}" method="POST">
+                            @csrf
                             <div class="cart-btn d-flex mb-50">
                                 <p>Qty</p>
                                 <div class="quantity">
@@ -80,6 +81,7 @@
                                             class="fa fa-caret-down" aria-hidden="true"></i></span>
                                     <input type="number" class="qty-text" id="qty" name="quantity" step="1" min="1"
                                         max="300" name="quantity" value="1">
+                                        <input type="hidden" name="product_id" value="{{ $product->id }}">
                                     <span class="qty-plus"
                                         onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty )) effect.value++;return false;"><i
                                             class="fa fa-caret-up" aria-hidden="true"></i></span>
