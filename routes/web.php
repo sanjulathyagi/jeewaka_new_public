@@ -31,6 +31,7 @@ Route::prefix('products')->group(function (){
     Route::get('/',[ProductController::class, 'index'])->name('products.all');
     Route::get('/filter',[ProductController::class,'filter'])->name('products.filter');
     Route::get('/{product_id}/view',[ProductController::class,'view'])->name('products.view');
+    Route::post('/{product_id}/add/cart',[ProductController::class,'addCart'])->name('products.add.cart');
 });
 
 Route::prefix('MyAccount')->group(function (){
