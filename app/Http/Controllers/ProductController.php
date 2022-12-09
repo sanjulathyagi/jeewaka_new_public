@@ -25,4 +25,9 @@ class ProductController extends Controller
         $response['products'] = ProductFacade::get($product_id);
         return view('Pages.Products.index')->with($response);
     }
+
+    public function addCart(Request $request,$product_id)
+    {
+        
+    }
 }

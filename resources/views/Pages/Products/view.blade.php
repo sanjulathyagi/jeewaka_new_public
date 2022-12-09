@@ -71,7 +71,7 @@
                         </div>
 
                         <!-- Add to Cart Form -->
-                        <form class="cart clearfix" method="POST">
+                        <form class="cart clearfix" action="{{ route('products.add.cart' , $product->id) }}" method="POST">
                             <div class="cart-btn d-flex mb-50">
                                 <p>Qty</p>
                                 <div class="quantity">
