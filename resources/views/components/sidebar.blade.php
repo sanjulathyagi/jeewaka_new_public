@@ -42,6 +42,11 @@
                 <a href="#" class="fav-nav"><img src="img/core-img/favorites.png" alt=""> Favourite</a>
                 <a href="#" class="search-nav"><img src="img/core-img/search.png" alt=""> Search</a>
             </div>
+            @if (Auth::check())
+                <a href="" class="search-nav">Logout</a>
+            @else
+                <a href="{{ route('login') }}" class="search-nav">Login</a>
+            @endif
             <!-- Social Button -->
             <div class="social-info d-flex justify-content-between">
                 <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>

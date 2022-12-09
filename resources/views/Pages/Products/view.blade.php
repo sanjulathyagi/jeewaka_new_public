@@ -27,30 +27,13 @@
                                 @endforeach
                             </ol>
                             <div class="carousel-inner">
-                                @foreach ($collection as $item)
-                                <div class="carousel-item active">
-                                    <a class="gallery_img" href="img/product-img/pro-big-1.jpg">
-                                        <img class="d-block w-100" src="img/product-img/pro-big-1.jpg" alt="First slide">
+                                @foreach ($product->images as $index => $product_image)
+                                <div class="carousel-item {{ $index ==0?'active':'' }}">
+                                    <a class="gallery_img" href="{{ config('image.access_path') }}/{{ $product_image->image?$product_image->image->name:'' }}">
+                                        <img class="d-block w-100" src="{{ config('image.access_path') }}/{{ $product_image->image?$product_image->image->name:'' }}">
                                     </a>
                                 </div>
-
                                 @endforeach
-
-                                <div class="carousel-item">
-                                    <a class="gallery_img" href="img/product-img/pro-big-2.jpg">
-                                        <img class="d-block w-100" src="img/product-img/pro-big-2.jpg" alt="Second slide">
-                                    </a>
-                                </div>
-                                <div class="carousel-item">
-                                    <a class="gallery_img" href="img/product-img/pro-big-3.jpg">
-                                        <img class="d-block w-100" src="img/product-img/pro-big-3.jpg" alt="Third slide">
-                                    </a>
-                                </div>
-                                <div class="carousel-item">
-                                    <a class="gallery_img" href="img/product-img/pro-big-4.jpg">
-                                        <img class="d-block w-100" src="img/product-img/pro-big-4.jpg" alt="Fourth slide">
-                                    </a>
-                                </div>
                             </div>
                         </div>
                     </div>
