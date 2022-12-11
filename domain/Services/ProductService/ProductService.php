@@ -3,6 +3,7 @@
 namespace domain\Services\ProductService;
 
 use App\Models\Product;
+use App\Models\CartItem;
 use App\Models\ProductImage;
 use App\Models\StockReceive;
 use App\Models\StockReturn;
@@ -16,6 +17,7 @@ class ProductService
     {
         $this->product = new Product();
         $this->productImage = new ProductImage();
+        $this->cart_item = new CartItem();
         $this->receive = new StockReceive();
         $this->returns = new StockReturn();
     }
@@ -202,5 +204,16 @@ class ProductService
         }
 
         return $products->get();
+    }
+
+    public function filter($data)
+    {
+        return $this->product->filter($data);
+    }
+
+    public function addcart($data)
+    {
+        $data['customer_id'] = Auth::id();
+        $this->cart_item->create($data);
     }
 }
