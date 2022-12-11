@@ -28,6 +28,7 @@ class ProductController extends Controller
 
     public function addCart(Request $request)
     {
+        ProductFacade::addCart($request->all());
 
     }
 }

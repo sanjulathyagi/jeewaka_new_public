@@ -87,7 +87,7 @@
                                             class="fa fa-caret-up" aria-hidden="true"></i></span>
                                 </div>
                             </div>
-                            <button type="submit" name="addtocart" value="5" class="btn amado-btn">Add to
+                            <button type="submit" class="btn amado-btn">Add to
                                 cart</button>
                         </form>
 
