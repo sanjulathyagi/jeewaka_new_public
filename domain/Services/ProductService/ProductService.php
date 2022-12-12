@@ -211,9 +211,14 @@ class ProductService
         return $this->product->filter($data);
     }
 
-    public function addcart($data)
+    public function addCart($data)
     {
         $data['customer_id'] = Auth::id();
         $this->cart_item->create($data);
+    }
+
+    public function cartCount()
+    {
+        return $this->cart_item->cartCount(Auth::id());
     }
 }

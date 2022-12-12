@@ -19,5 +19,17 @@ class Customer extends Authenticatable
 
     ];
 
+    public function cartItems()
+    {
+        return $this->hasMany(cartItem::class,'customer_id','id');
+
+    }
+
+    public function cartItemsCount()
+    {
+        return $this->hasMany(cartItem::class,'customer_id','id')->count();
+
+    }
+
 }
 
