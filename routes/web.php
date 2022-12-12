@@ -55,7 +55,7 @@ Route::prefix('orders')->group(function () {
 });
 
 Route::prefix('cart')->group(function () {
-    Route::get('/', [CartController::class,'index'])->name('cart');
+    Route::get('/', [CartController::class,'index'])->name('cart.index');
 });
 
 Route::prefix('MyAccount')->group(function () {

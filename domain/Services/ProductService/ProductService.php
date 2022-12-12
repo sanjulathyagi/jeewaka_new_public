@@ -217,8 +217,5 @@ class ProductService
         $this->cart_item->create($data);
     }
 
-    public function cartCount()
-    {
-        return $this->cart_item->cartCount(Auth::id());
-    }
+    
 }

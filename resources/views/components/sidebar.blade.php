@@ -26,7 +26,7 @@
                     <li class="active"><a href="index.html">Home</a></li>
                     <li><a href="shop.html">Shop</a></li>
                     <li><a href="{{ route('products.all') }}">Product</a></li>
-                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="{{ route('cart.index') }}">Cart</a></li>
                     <li><a href="checkout.html">Checkout</a></li>
                 </ul>
             </nav>
@@ -37,7 +37,7 @@
             </div>
             <!-- Cart Menu -->
             <div class="cart-fav-search mb-100">
-                <a href="cart.html" class="cart-nav"><img src="img/core-img/cart.png" alt=""> Cart
+                <a href="{{ route('cart.index') }}" class="cart-nav"><img src="img/core-img/cart.png" alt=""> Cart
                     <span>({{ Auth::user()->cartItemCount() }})</span></a>
                 <a href="#" class="fav-nav"><img src="img/core-img/favorites.png" alt=""> Favourite</a>
                 <a href="#" class="search-nav"><img src="img/core-img/search.png" alt=""> Search</a>
