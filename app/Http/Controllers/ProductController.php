@@ -26,9 +26,5 @@ class ProductController extends Controller
         return view('Pages.Products.index')->with($response);
     }
 
-    public function addCart(Request $request)
-    {
-        ProductFacade::addCart($request->all());
-
-    }
+    
 }

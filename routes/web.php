@@ -31,11 +31,14 @@ Route::prefix('products')->group(function (){
     Route::get('/',[ProductController::class, 'index'])->name('products.all');
     Route::get('/filter',[ProductController::class,'filter'])->name('products.filter');
     Route::get('/{product_id}/view',[ProductController::class,'view'])->name('products.view');
-    Route::post('/add/cart',[ProductController::class,'addCart'])->name('products.add.cart');
+
+    Route::post('/add/cart',[AccountController::class,'addCart'])->name('products.add.cart');
+
 });
 
 Route::prefix('MyAccount')->group(function (){
     Route::get('/',[AccountController::class, 'index'])->name('account.index');
+
 });
 
 Route::prefix('contact-us')->group(function () {
