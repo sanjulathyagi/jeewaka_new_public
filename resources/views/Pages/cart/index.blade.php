@@ -19,15 +19,22 @@
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach ($cart_items as $cart_item)
                             <tr>
                                 <td class="cart_product_img">
-                                    <a href="#"><img src="img/bg-img/cart1.jpg" alt="Product"></a>
+                                    <a href="#">
+                                        @if ($cart_item->primaryImage)
+                                        <img src="{{ config('image.access_path') }}/{{ $cart_item->primaryImage->image ? $cart_item->primaryImage->image->name : '' }}"
+                                            alt="">
+                                        @else
+                                        <img src="{{ asset('img/no-image-png-2.png') }}">
+                                        @endif
                                 </td>
                                 <td class="cart_product_desc">
-                                    <h5>White Modern Chair</h5>
+                                    <h5>{{ $cart_item->product->name }}</h5>
                                 </td>
                                 <td class="price">
-                                    <span>$130</span>
+                                    <span>Rs{{ $cart_item->product->price  }}</span>
                                 </td>
                                 <td class="qty">
                                     <div class="qty-btn d-flex">
@@ -61,27 +68,8 @@
                                     </div>
                                 </td>
                             </tr>
-                            <tr>
-                                <td class="cart_product_img">
-                                    <a href="#"><img src="img/bg-img/cart3.jpg" alt="Product"></a>
-                                </td>
-                                <td class="cart_product_desc">
-                                    <h5>Minimal Plant Pot</h5>
-                                </td>
-                                <td class="price">
-                                    <span>$10</span>
-                                </td>
-                                <td class="qty">
-                                    <div class="qty-btn d-flex">
-                                        <p>Qty</p>
-                                        <div class="quantity">
-                                            <span class="qty-minus" onclick="var effect = document.getElementById('qty3'); var qty = effect.value; if( !isNaN( qty ) &amp;&amp; qty &gt; 1 ) effect.value--;return false;"><i class="fa fa-minus" aria-hidden="true"></i></span>
-                                            <input type="number" class="qty-text" id="qty3" step="1" min="1" max="300" name="quantity" value="1">
-                                            <span class="qty-plus" onclick="var effect = document.getElementById('qty3'); var qty = effect.value; if( !isNaN( qty )) effect.value++;return false;"><i class="fa fa-plus" aria-hidden="true"></i></span>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
+                            @endforeach
+
                         </tbody>
                     </table>
                 </div>
