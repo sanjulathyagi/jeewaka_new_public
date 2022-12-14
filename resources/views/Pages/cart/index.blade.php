@@ -16,6 +16,7 @@
                                 <th>Name</th>
                                 <th>Price</th>
                                 <th>Quantity</th>
+                                <th>Total</th>
                                 <th></th>
                             </tr>
                         </thead>
@@ -47,26 +48,8 @@
                                         </div>
                                     </div>
                                 </td>
-                            </tr>
-                            <tr>
-                                <td class="cart_product_img">
-                                    <a href="#"><img src="img/bg-img/cart2.jpg" alt="Product"></a>
-                                </td>
                                 <td class="cart_product_desc">
-                                    <h5>Minimal Plant Pot</h5>
-                                </td>
-                                <td class="price">
-                                    <span>$10</span>
-                                </td>
-                                <td class="qty">
-                                    <div class="qty-btn d-flex">
-                                        <p>Qty</p>
-                                        <div class="quantity">
-                                            <span class="qty-minus" onclick="var effect = document.getElementById('qty2'); var qty = effect.value; if( !isNaN( qty ) &amp;&amp; qty &gt; 1 ) effect.value--;return false;"><i class="fa fa-minus" aria-hidden="true"></i></span>
-                                            <input type="number" class="qty-text" id="qty2" step="1" min="1" max="300" name="quantity" value="1">
-                                            <span class="qty-plus" onclick="var effect = document.getElementById('qty2'); var qty = effect.value; if( !isNaN( qty )) effect.value++;return false;"><i class="fa fa-plus" aria-hidden="true"></i></span>
-                                        </div>
-                                    </div>
+                                    <h5>{{ $cart_item->product->price * $cart_item->quantity}}</h5>
                                 </td>
                             </tr>
                             @endforeach
@@ -79,7 +62,7 @@
                 <div class="cart-summary">
                     <h5>Cart Total</h5>
                     <ul class="summary-table">
-                        <li><span>subtotal:</span> <span>$140.00</span></li>
+                        <li><span>subtotal:</span> <span>Rs.{{ Auth::user()->getCartTotal() }}</span></li>
                         <li><span>delivery:</span> <span>Free</span></li>
                         <li><span>total:</span> <span>$140.00</span></li>
                     </ul>

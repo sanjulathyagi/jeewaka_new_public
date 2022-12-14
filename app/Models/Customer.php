@@ -31,5 +31,16 @@ class Customer extends Authenticatable
 
     }
 
+    public function getCartTotal()
+    {
+        $items = CartItem::where('customer_id',$this->id)->get();
+        $total =0;
+        foreach ($items as $item) {
+            $total += $item->product->price * $item->quantity;
+
+        }
+        return $total;
+    }
+
 }
 
