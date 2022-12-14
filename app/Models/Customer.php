@@ -39,7 +39,7 @@ class Customer extends Authenticatable
             $total += $item->product->price * $item->quantity;
 
         }
-        return $total;
+        return number_format($total, 2);
     }
 
 }
