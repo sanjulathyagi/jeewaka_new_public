@@ -14,17 +14,17 @@ class Order extends Model
 
     ];
 
-    // public function checkoutItem()
-    // {
-    //     $cart_items = CartItem::where('customer_id', Auth::id())->get();
-    //     foreach($cart_items as $cart_item){
-    //         Order::create([
-    //             'customer_id' =>Auth::id(),
-    //             'product_id' =>$cart_item->product_id,
-    //             'quantity' =>$cart_item->quantity,
-    //         ]);
-    //         $cart_item->delete();
-    //     }
-    // }
+    public function checkoutItem()
+    {
+       $cart_items = CartItem::where('customer_id', Auth::id())->get();
+        foreach($cart_items as $cart_item){
+            Order::create([
+                'customer_id' =>Auth::id(),
+                'product_id' =>$cart_item->product_id,
+                'quantity' =>$cart_item->quantity,
+            ]);
+            $cart_item->delete();
+        }
+    }
 
 }
