@@ -11,8 +11,8 @@
                 <input type="text" class="form-control" id="search_input" name="search">
             </div>
         </div>
-{{--
-        {{-- <div class="widget catagory mb-50">
+
+         <div class="widget catagory mb-50">
             <!-- Widget Title -->
             <h6 class="widget-title mb-30">Categories</h6>
             <!--  Catagories  -->
@@ -28,7 +28,7 @@
 
                 </ul>
             </div>
-        </div> --}} --}}
+        </div>
 
         <div class="widget catagory mb-50">
             <!-- Widget Title -->
