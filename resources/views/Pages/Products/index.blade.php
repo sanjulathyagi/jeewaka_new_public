@@ -30,7 +30,7 @@
             </div>
         </div>
 
-        <div class="widget catagory mb-50">
+        {{-- <div class="widget catagory mb-50">
             <!-- Widget Title -->
             <h6 class="widget-title mb-30">Min Price</h6>
             <!--  Catagories  -->
@@ -38,7 +38,7 @@
                 <input type="number" class="form-control" min="0" id="search_min_price" name="min_price">
 
             </div>
-        </div>
+        </div> --}}
 
         <div class="widget catagory mb-50">
             <!-- Widget Title -->
